@@ -5,346 +5,30 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #06131a; /* רקע ירוק-כחול עמוק ועשיר מאוד */
-    color: #e2e8f0;
-    line-height: 1.7;
-    overflow-x: hidden;
-}
-
-/* תפריט ניווט עליון - זכוכית מעושנת בטקסטורה יוקרתית */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(6, 19, 26, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    display: flex;
-    justify-content: center;
-    padding: 14px 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(20, 184, 166, 0.15);
-}
-
-.nav-container {
-    display: flex;
-    gap: 12px;
-}
-
-.navbar a {
-    color: #94a3b8;
-    text-decoration: none;
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.navbar a:hover {
-    color: #ffffff;
-    background: rgba(20, 184, 166, 0.15);
-    box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
-    transform: translateY(-1px);
-}
-
-/* מקטעי עמוד עם מעברי תאורה מרהיבים ברקע */
-.section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 110px 20px 60px 20px;
-    box-sizing: border-box;
-    background: radial-gradient(circle at 50% 30%, #0d2331 0%, #06131a 100%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    position: relative;
-}
-
-/* מסך פתיחה ראשון דינמי */
-.hero-section {
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 850px;
-}
-
-.badge {
-    background: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(168, 85, 247, 0.2));
-    color: #2dd4bf;
-    padding: 8px 20px;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 25px;
-    border: 1px solid rgba(20, 184, 166, 0.4);
-    box-shadow: 0 0 25px rgba(20, 184, 166, 0.2);
-}
-
-.hero-section h1 {
-    font-size: 52px;
-    margin: 0 0 15px 0;
-    font-weight: 800;
-    color: #ffffff;
-    letter-spacing: -1px;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.hero-section p {
-    font-size: 20px;
-    color: #94a3b8;
-    margin-bottom: 40px;
-}
-
-/* כפתור הורדה עם שילוב צבעי טורקיז וסגול עמוק */
-.download-btn {
-    background: linear-gradient(135deg, #14b8a6, #8b5cf6);
-    color: white;
-    padding: 15px 34px;
-    border-radius: 35px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 10px 30px rgba(20, 184, 166, 0.4);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.download-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
-    filter: brightness(1.1);
-}
-
-/* כרטיסיות תוכן בסטייל Glassmorphism עם מסגרת טורקיז עדינה */
-.section-content {
-    max-width: 900px;
-    width: 100%;
-    background: rgba(13, 31, 43, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    text-align: right;
-    border: 1px solid rgba(20, 184, 166, 0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-/* קו זוהר עליון לכל כרטיסייה בגווני טורקיז-סגול */
-.section-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, #8b5cf6, #14b8a6, #2dd4bf);
-}
-
-.section-content h2 {
-    color: #ffffff;
-    font-size: 28px;
-    margin-top: 0;
-    margin-bottom: 25px;
-    border-bottom: 1px solid rgba(20, 184, 166, 0.2);
-    padding-bottom: 15px;
-}
-
-.subtitle {
-    font-size: 18px;
-    font-weight: 600;
-    color: #2dd4bf;
-    margin-bottom: 20px;
-}
-
-.section-content p {
-    color: #cbd5e1;
-}
-
-/* פריטים בציר הזמן והניסיון עם מסגרת טורקיז בצד */
-.timeline-item, .job-card {
-    background: rgba(6, 19, 26, 0.6);
-    border-right: 4px solid #14b8a6;
-    padding: 22px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
-    border-left: 1px solid rgba(255, 255, 255, 0.04);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    transition: all 0.3s ease;
-}
-
-.timeline-item:hover, .job-card:hover {
-    transform: translateX(-6px) translateY(-2px);
-    background: rgba(6, 19, 26, 0.9);
-    border-color: #2dd4bf;
-    box-shadow: 0 10px 30px rgba(20, 184, 166, 0.2);
-}
-
-.timeline-item h3, .job-card h3 {
-    margin: 0 0 6px 0;
-    font-size: 19px;
-    color: #ffffff;
-}
-
-.institution, .company, .year {
-    display: block;
-    font-size: 13px;
-    color: #94a3b8;
-    margin-bottom: 10px;
-}
-
-.job-card ul, .styled-list {
-    margin: 12px 0 0 0;
-    padding-right: 20px;
-}
-
-.job-card li, .styled-list li {
-    font-size: 14px;
-    color: #cbd5e1;
-    margin-bottom: 8px;
-}
-
-.sub-heading {
-    color: #ffffff;
-    font-size: 19px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.divider {
-    border: 0;
-    border-top: 1px solid rgba(20, 184, 166, 0.2);
-    margin: 35px 0;
-}
-
-/* רשת כישורים עם אפקט תלת ממד ומגע סגול-טורקיז */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-}
-
-.skill-item {
-    background: rgba(6, 19, 26, 0.6);
-    padding: 18px;
-    border-radius: 12px;
-    font-size: 14px;
-    color: #cbd5e1;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.skill-item:hover {
-    border-color: #14b8a6;
-    background: rgba(20, 184, 166, 0.08);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(20, 184, 166, 0.2);
-    color: #ffffff;
-}
-
-/* אזור יצירת קשר יוקרתי בגימור מיוחד */
-.professional-contact {
-    background: rgba(13, 31, 43, 0.85);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    box-shadow: 0 20px 50px rgba(139, 92, 246, 0.15);
-}
-
-.contact-header {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.contact-header p {
-    color: #94a3b8;
-    margin: 6px 0 0 0;
-    font-size: 16px;
-}
-
-.contact-info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-@media (max-width: 600px) {
-    .contact-info-grid {
-        grid-template-columns: 1fr;
-    }
-    .hero-section h1 {
-        font-size: 38px;
-    }
-}
-
-.info-item {
-    background: rgba(6, 19, 26, 0.7);
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    transition: all 0.3s ease;
-}
-
-.info-item:hover {
-    border-color: rgba(20, 184, 166, 0.4);
-    background: rgba(6, 19, 26, 0.95);
-}
-
-.info-label {
-    font-size: 12px;
-    color: #2dd4bf;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.info-value {
-    font-size: 16px;
-    color: #ffffff;
-    font-weight: 500;
-}
-
-.info-value.link {
-    color: #2dd4bf;
-    text-decoration: none;/* הגדרות כלליות וגלילה חלקה */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8fafc; /* רקע בהיר, נקי ואוורירי */
-    color: #334155;
+    /* רקע בהיר עם תת-גוון כחלחל-אפור עשיר ורשת נקודות עדינה */
+    background-color: #f0f4f8;
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 24px 24px;
+    color: #1e293b;
     line-height: 1.8;
     overflow-x: hidden;
 }
 
-/* תפריט ניווט עליון מרחף - זכוכית בהירה נקייה */
+/* תפריט ניווט עליון מרחף עם מסגרת כחולה נקייה */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(240, 244, 248, 0.92);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     display: flex;
     justify-content: center;
     padding: 16px 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    border-bottom: 2px solid #2563eb;
 }
 
 .nav-container {
@@ -353,22 +37,23 @@ body {
 }
 
 .navbar a {
-    color: #64748b;
+    color: #334155;
     text-decoration: none;
     padding: 8px 20px;
     border-radius: 30px;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar a:hover {
-    color: #0f172a;
-    background: rgba(15, 23, 42, 0.05);
+    color: #ffffff;
+    background: #2563eb;
     transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
 }
 
-/* מקטעי עמוד עם הפרדות נקיות ומרווחות */
+/* מקטעי עמוד עם מעבר רקע רך בהשראת גווני כחול */
 .section {
     min-height: 100vh;
     display: flex;
@@ -377,12 +62,12 @@ body {
     align-items: center;
     padding: 120px 24px 60px 24px;
     box-sizing: border-box;
-    background: #f8fafc;
-    border-bottom: 1px solid #e2e8f0;
+    background: radial-gradient(circle at 50% 50%, rgba(191, 219, 254, 0.4) 0%, transparent 70%);
+    border-bottom: 1px solid #cbd5e1;
     position: relative;
 }
 
-/* מסך פתיחה ראשון בעיצוב נקי ומרשים */
+/* מסך פתיחה ראשון בעיצוב בולט ומרשים */
 .hero-section {
     text-align: center;
 }
@@ -392,15 +77,16 @@ body {
 }
 
 .badge {
-    background: #e0f2fe;
-    color: #0369a1;
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    color: #1d4ed8;
     padding: 8px 22px;
     border-radius: 30px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     display: inline-block;
     margin-bottom: 30px;
-    border: 1px solid #bae6fd;
+    border: 1px solid #93c5fd;
+    box-shadow: 0 4px 15px rgba(29, 78, 216, 0.12);
 }
 
 .hero-section h1 {
@@ -418,9 +104,9 @@ body {
     font-weight: 400;
 }
 
-/* כפתור הורדה נקי ויוקרתי */
+/* כפתור הורדה בעיצוב כחול עמוק ודינמי */
 .download-btn {
-    background: #0f172a;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
     color: white;
     padding: 16px 36px;
     border-radius: 35px;
@@ -430,27 +116,39 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .download-btn:hover {
-    background: #1e293b;
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.25);
+    box-shadow: 0 15px 30px rgba(29, 78, 216, 0.45);
+    filter: brightness(1.1);
 }
 
-/* כרטיסיות תוכן בסטייל מודרני מרווח ונקי */
+/* כרטיסיות תוכן מודרניות עם קו כחול עליון */
 .section-content {
     max-width: 920px;
     width: 100%;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
     padding: 55px;
     border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
     text-align: right;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #cbd5e1;
     position: relative;
+    overflow: hidden;
+}
+
+.section-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb, #1d4ed8);
 }
 
 .section-content h2 {
@@ -466,7 +164,7 @@ body {
 .subtitle {
     font-size: 18px;
     font-weight: 600;
-    color: #0284c7;
+    color: #2563eb;
     margin-bottom: 24px;
 }
 
@@ -474,24 +172,24 @@ body {
     color: #475569;
 }
 
-/* פריטים בציר הזמן והניסיון עם מסגרת עדינה */
+/* פריטים בציר הזמן והניסיון עם מסגרת כחולה צדדית */
 .timeline-item, .job-card {
     background: #f8fafc;
-    border-right: 4px solid #0284c7;
+    border-right: 5px solid #2563eb;
     padding: 24px;
     border-radius: 12px;
     margin-bottom: 20px;
-    border-top: 1px solid #f1f5f9;
-    border-left: 1px solid #f1f5f9;
-    border-bottom: 1px solid #f1f5f9;
+    border-top: 1px solid #e2e8f0;
+    border-left: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
     transition: all 0.3s ease;
 }
 
 .timeline-item:hover, .job-card:hover {
     transform: translateX(-4px);
     background: #ffffff;
-    border-color: #0369a1;
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+    border-color: #1d4ed8;
+    box-shadow: 0 10px 25px rgba(29, 78, 216, 0.12);
 }
 
 .timeline-item h3, .job-card h3 {
@@ -533,7 +231,7 @@ body {
     margin: 40px 0;
 }
 
-/* רשת כישורים בעיצוב כרטיסיות נקיות */
+/* רשת כישורים בעיצוב כחלחל וחי במעבר עכבר */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -551,18 +249,19 @@ body {
 }
 
 .skill-item:hover {
-    border-color: #0284c7;
-    background: #ffffff;
+    border-color: #2563eb;
+    background: #eff6ff;
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(2, 132, 199, 0.08);
-    color: #0f172a;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
+    color: #1d4ed8;
+    font-weight: 600;
 }
 
-/* אזור יצירת קשר בגימור אלגנטי בהיר */
+/* אזור יצירת קשר בגימור אלגנטי וממוקד */
 .professional-contact {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.96);
     border: 1px solid #cbd5e1;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
 }
 
 .contact-header {
@@ -603,15 +302,16 @@ body {
 }
 
 .info-item:hover {
-    border-color: #94a3b8;
+    border-color: #2563eb;
     background: #ffffff;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.12);
 }
 
 .info-label {
     font-size: 12px;
-    color: #0284c7;
+    color: #2563eb;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
@@ -622,19 +322,12 @@ body {
 }
 
 .info-value.link {
-    color: #0284c7;
+    color: #2563eb;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .info-value.link:hover {
-    color: #0369a1;
-    text-decoration: underline;
-}
-    transition: color 0.2s;
-}
-
-.info-value.link:hover {
-    color: #5eead4;
+    color: #1d4ed8;
     text-decoration: underline;
 }
