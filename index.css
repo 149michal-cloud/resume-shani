@@ -1,0 +1,100 @@
+  /* גלילה חלקה לכל העמוד */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* עיצוב התפריט העליון שנשאר קבוע תמיד */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        /* עיצוב הקישורים בתפריט שיראו כמו כפתורים */
+        .navbar a {
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        /* עיצוב המקטעים בעמוד */
+        .section {
+            min-height: 100vh; /* כל קטע תופס לפחות את כל גובה המסך */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 90px 20px 40px 20px; /* ריווח פנימי למניעת הסתרה ע"י התפריט */
+            font-size: 18px;
+            border-bottom: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        /* עיצוב כללי לתיבות התוכן */
+        .section-content {
+            max-width: 800px;
+            width: 100%;
+            line-height: 1.6;
+            color: #333;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: right;
+        }
+
+        /* עיצוב כותרות ותתי כותרות בקטעים */
+        .section-content h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 8px;
+            margin-top: 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .section-content h3 {
+            color: #333;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        .section-content ul {
+            padding-right: 20px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        .section-content li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        /* צבעי רקע מגוונים לכל קטע */
+        #section1 { background-color: #f8f9fa; }
+        #section2 { background-color: #e9ecef; }
+        #section3 { background-color: #dee2e6; }
+        #section4 { background-color: #ced4da; }
+        #section5 { background-color: #adb5bd; }
