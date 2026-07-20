@@ -2,163 +2,45 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>קורות חיים - שני זהבי - כהן</title>
-    <style>
-        /* גלילה חלקה לכל העמוד */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* עיצוב התפריט העליון שנשאר קבוע תמיד */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            padding: 10px 0;
-            z-index: 1000;
-        }
-
-        /* עיצוב הקישורים בתפריט שיראו כמו כפתורים */
-        .navbar a {
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 16px;
-            transition: background-color 0.2s;
-        }
-
-        .navbar a:hover {
-            background-color: #0056b3;
-        }
-
-        /* עיצוב המקטעים בעמוד */
-        .section {
-            min-height: 100vh; /* כל קטע תופס לפחות את כל גובה המסך */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 90px 20px 40px 20px; /* ריווח פנימי למניעת הסתרה ע"י התפריט */
-            font-size: 18px;
-            border-bottom: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-
-        /* עיצוב כללי לתיבות התוכן */
-        .section-content {
-            max-width: 800px;
-            width: 100%;
-            line-height: 1.6;
-            color: #333;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: right;
-        }
-
-        /* עיצוב כותרות ותתי כותרות בקטעים */
-        .section-content h2 {
-            color: #0056b3;
-            border-bottom: 2px solid #0056b3;
-            padding-bottom: 8px;
-            margin-top: 0;
-            text-align: center;
-            font-size: 24px;
-        }
-
-        .section-content h3 {
-            color: #333;
-            font-size: 18px;
-            margin-top: 20px;
-            margin-bottom: 8px;
-        }
-
-        .section-content ul {
-            padding-right: 20px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-        }
-
-        .section-content li {
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-
-        /* עיצוב מיוחד לחלק יצירת הקשר בסוף (קטע 5) */
-        .contact-box {
-            background: linear-gradient(135deg, #e3f2fd, #fce4ec);
-            border: 2px dashed #007bff;
-            text-align: center;
-        }
-
-        .contact-box h2 {
-            color: #d81b60;
-        }
-
-        .contact-details {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            margin-top: 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .contact-details a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .contact-details a:hover {
-            text-decoration: underline;
-        }
-
-        /* צבעי רקע מגוונים לכל קטע */
-        #section1 { background-color: #f8f9fa; }
-        #section2 { background-color: #e9ecef; }
-        #section3 { background-color: #dee2e6; }
-        #section4 { background-color: #ced4da; }
-        #section5 { background-color: #f5f5f5; }
-
-    </style>
+    <!-- קישור לקובץ ה-CSS החיצוני -->
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- תפריט עליון קבוע עם קישורים ל-5 החלקים -->
+    <!-- תפריט ניווט עליון יוקרתי וקבוע -->
     <nav class="navbar">
-        <a href="#section1">אודות</a>
-        <a href="#section2">השכלה</a>
-        <a href="#section3">ניסיון תעסוקתי</a>
-        <a href="#section4">כישורים ויכולות</a>
-        <a href="#section5">יצירת קשר</a>
+        <div class="nav-container">
+            <a href="#section1">ראשי</a>
+            <a href="#section2">אודות</a>
+            <a href="#section3">השכלה</a>
+            <a href="#section4">ניסיון תעסוקתי</a>
+            <a href="#section5">כישורים</a>
+            <a href="#section6">יצירת קשר</a>
+        </div>
     </nav>
 
-    <!-- תוכן העמוד עם 5 המקטעים -->
-    <div class="content">
+    <!-- תוכן העמוד המרכזי -->
+    <main class="content">
         
-        <!-- קטע 1: אודות (עם כותרת וטקסט מעודכן עלייך) -->
-        <section id="section1" class="section">
+        <!-- קטע 1: מסך פתיחה מרשים -->
+        <section id="section1" class="section hero-section">
+            <div class="hero-content">
+                <span class="badge">מרחב מקצועי</span>
+                <h1>שני זהבי - כהן</h1>
+                <p>מורה מוסמכת לאנגלית B.Ed | מומחית בהוראה, דקדוק ואנגלית אקדמית</p>
+                <a href="cv.docx" download class="download-btn">
+                    <span>📄</span> הורדת קורות חיים
+                </a>
+            </div>
+        </section>
+
+        <!-- קטע 2: אודות -->
+        <section id="section2" class="section">
             <div class="section-content">
                 <h2>אודות</h2>
-                <p style="font-size: 20px; font-weight: bold; color: #0056b3; margin-bottom: 15px;">
-                    שני זהבי - כהן | מורה מוסמכת לאנגלית (.Ed.B)
-                </p>
+                <p class="subtitle">שני זהבי - כהן | מורה מוסמכת לאנגלית (.Ed.B)</p>
                 <p>
                     מומחית בהקניית יסודות השפה, דקדוק ואנגלית אקדמית. 
                     בעלת ניסיון עשיר בהוראה בכיתות ז'-י"ב והגשה לבחינות הבגרות. 
@@ -168,36 +50,36 @@
             </div>
         </section>
         
-        <!-- קטע 2: השכלה והשתלמויות -->
-        <section id="section2" class="section">
+        <!-- קטע 3: השכלה והשתלמויות -->
+        <section id="section3" class="section">
             <div class="section-content">
-                <h2>השכלה</h2>
+                <h2>השכלה והשתלמויות</h2>
                 
-                <h3>B.Ed. בחינוך, החוג לאנגלית | מכללת תלפיות</h3>
-                <ul>
-                    <li>2023-2024</li>
-                </ul>
+                <div class="timeline-item">
+                    <h3>B.Ed. בחינוך, החוג לאנגלית | מכללת תלפיות</h3>
+                    <span class="year">2023-2024</span>
+                </div>
 
-                <h3>תעודת הוראה באנגלית | בית המורה שרנסקי (הרב מאיר)</h3>
-                <ul>
-                    <li>2021-2023</li>
-                </ul>
+                <div class="timeline-item">
+                    <h3>תעודת הוראה באנגלית | בית המורה שרנסקי (הרב מאיר)</h3>
+                    <span class="year">2021-2023</span>
+                </div>
 
-                <h3>מצוינות בהוראה | הוראת תיכונים | סמינר הרב מאיר</h3>
-                <ul>
-                    <li>2021-2022</li>
-                </ul>
+                <div class="timeline-item">
+                    <h3>מצוינות בהוראה | הוראת תיכונים | סמינר הרב מאיר</h3>
+                    <span class="year">2021-2022</span>
+                </div>
 
-                <h3>בגרות במדעי המחשב ומבוא למדע וטכנולוגיה | סמינר הרב כהנא</h3>
-                <ul>
-                    <li>התמחות בתכנון ותכנות מערכות, מגמת טכנולוגיות מידע.</li>
-                    <li>2018-2021</li>
-                </ul>
+                <div class="timeline-item">
+                    <h3>בגרות במדעי המחשב ומבוא למדע וטכנולוגיה | סמינר הרב כהנא</h3>
+                    <p>התמחות בתכנון ותכנות מערכות, מגמת טכנולוגיות מידע.</p>
+                    <span class="year">2018-2021</span>
+                </div>
 
-                <hr style="border: 0; border-top: 1px solid #ddd; margin: 20px 0;">
+                <hr class="divider">
 
-                <h2>השתלמויות וקורסים שונים</h2>
-                <ul>
+                <h3>השתלמויות וקורסים שונים</h3>
+                <ul class="styled-list">
                     <li>Talk the talk - Strategies for BOOSTING your student's confidence in Speaking (דבורה גבאִי)</li>
                     <li>הטמעת תוכנית לימודים חדשה באנגלית (מאשה פוקסמן)</li>
                     <li>הכנה לבגרות Bagrut Success for Every Module (לורייין גלזר)</li>
@@ -206,65 +88,85 @@
             </div>
         </section>
 
-        <!-- קטע 3: ניסיון תעסוקתי -->
-        <section id="section3" class="section">
+        <!-- קטע 4: ניסיון תעסוקתי -->
+        <section id="section4" class="section">
             <div class="section-content">
                 <h2>ניסיון תעסוקתי</h2>
 
-                <h3>מורה לאנגלית באולפנת הראל כפ"ס | 2024-הווה</h3>
-                <ul>
-                    <li>מורה לאנגלית הוראת אנגלית לכיתות ז'-י"ב, כולל הכנה והגשה לבחינות בגרות (3-4 יחידות לימוד). בעלת שליטה מלאה בכל חומרי הלימוד ומבנה הבחינה ל-5 יחידות, בחינות בעל פה וליווי פרויקטים.</li>
-                    <li>מתן שיעורים פרטיים לתלמידות במסגרת הלימודים.</li>
-                </ul>
+                <div class="job-card">
+                    <h3>מורה לאנגלית | אולפנת הראל כפ"ס</h3>
+                    <span class="year">2024 - הווה</span>
+                    <ul>
+                        <li>הוראת אנגלית לכיתות ז'-י"ב, כולל הכנה והגשה לבחינות בגרות (3-4 יחידות לימוד).</li>
+                        <li>בעלת שליטה מלאה בכל חומרי הלימוד ומבנה הבחינה ל-5 יחידות, בחינות בעל פה וליווי פרויקטים.</li>
+                        <li>מתן שיעורים פרטיים לתלמידות במסגרת הלימודים.</li>
+                    </ul>
+                </div>
 
-                <h3>מורה להעשרה וקידום האנגלית | "עזר מציין", "המנחיל", "ניצנים" | 2019-2023</h3>
-                <ul>
-                    <li>קידום אוכלוסיות מוחלשות, הערכת התלמיד ומתן משוב התקדמות.</li>
-                    <li>סגירת פערים לימודיים משמעותיים והקניית אסטרטגיות למידה לשיפור ציונים בפרק זמן קצר, מתן הדרכה באנגלית, יצירת חומרי לימוד מותאמים ומעקב אחר התקדמות התלמידים לצורך שיפור.</li>
-                </ul>
+                <div class="job-card">
+                    <h3>מורה להעשרה וקידום האנגלית | "עזר מציין", "המנחיל", "ניצנים"</h3>
+                    <span class="year">2019 - 2023</span>
+                    <ul>
+                        <li>קידום אוכלוסיות מוחלשות, הערכת התלמיד ומתן משוב התקדמות.</li>
+                        <li>סגירת פערים לימודיים משמעותיים והקניית אסטרטגיות למידה לשיפור ציונים בפרק זמן קצר.</li>
+                        <li>יצירת חומרי לימוד מותאמים ומעקב אישי אחר התקדמות התלמידים.</li>
+                    </ul>
+                </div>
 
-                <h3>מורה פרטית לאנגלית | פרטני | 2019-הווה</h3>
-                <ul>
-                    <li>מתן הדרכה אישית באנגלית הן במסגרות קבוצתיות והן במסגרות אישיות, פיתוח מערכי שיעור וחומרים מרתקים.</li>
-                </ul>
+                <div class="job-card">
+                    <h3>מורה פרטית לאנגלית | מסגרת פרטנית</h3>
+                    <span class="year">2019 - הווה</span>
+                    <ul>
+                        <li>מתן הדרכה אישית באנגלית במסגרות קבוצתיות ואישיות, פיתוח מערכי שיעור וחומרים מרתקים.</li>
+                    </ul>
+                </div>
 
-                <h3>שיווק כנסים לחברות היי-טק | "אנשים ומחשבים" | 2022-2023</h3>
-                <ul>
-                    <li>שיווק כנסים ואירועים בהייטק, ניהול קשרי לקוחות ופיתוח אסטרטגיות וחומרים שיווקיים.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- קטע 4: כישורים ויכולות -->
-        <section id="section4" class="section">
-            <div class="section-content">
-                <h2>כישורים ויכולות</h2>
-                <ul>
-                    <li>יכולת עבודה עם צוות, האצלת סמכויות, ועם זאת מוכנות לעשות ולעבוד באופן עצמאי, להגשמת יעדים ומטרות.</li>
-                    <li>יכולת פיתוח חומרי למידה דיגיטליים מתקדמים ושילוב כלי AI וטכנולוגיה בהוראת השפה.</li>
-                    <li>בעלת ידע פדגוגי נרחב המאפשר הגשה לבגרות בכל הרמות (3, 4 ו-5 יח"ל), כולל הכנה למבחנים בעל פה (Oral Exams) והנחיית תלמידות בכתב וביצירת פרויקטים באנגלית.</li>
-                    <li>כושר ביטוי, יכולת הסברה מעולה והקניית ידע חדש.</li>
-                    <li>בעלת מוטיבציה ללמוד ולהתקדם בכל תחום רלוונטי.</li>
-                    <li>יכולות תקשורתיות גבוהות, יצירת קשר של כבוד, טיפול במשאבי אנוש בנעימות והכלה.</li>
-                    <li>התמחות בתרגום HEB-ENG ואנגלית עסקית ברמה גבוהה.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- קטע 5: יצירת קשר (מעוצב בצורה חמודה ואישית) -->
-        <section id="section5" class="section">
-            <div class="section-content contact-box">
-                <h2>✨ שני זהבי - כהן ✨</h2>
-                <p style="margin: 5px 0; color: #555; font-style: italic;">נשואה + 2 | יהודית 5 ב"ב</p>
-                
-                <div class="contact-details">
-                    <div>📞 טלפון: <a href="tel:0548477719">0548477719</a></div>
-                    <div>📧 מייל: <a href="mailto:0548477719s@gmail.com">0548477719s@gmail.com</a></div>
+                <div class="job-card">
+                    <h3>שיווק כנסים לחברות היי-טק | "אנשים ומחשבים"</h3>
+                    <span class="year">2022 - 2023</span>
+                    <ul>
+                        <li>שיווק כנסים ואירועים בהייטק, ניהול קשרי לקוחות ופיתוח אסטרטגיות וחומרים שיווקיים.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-    </div>
+        <!-- קטע 5: כישורים ויכולות -->
+        <section id="section5" class="section">
+            <div class="section-content">
+                <h2>כישורים ויכולות</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">יכולת עבודה צוותית, האצלת סמכויות ועבודה עצמאית להגשמת יעדים.</div>
+                    <div class="skill-item">פיתוח חומרי למידה דיגיטליים ושילוב כלי AI וטכנולוגיה בהוראה.</div>
+                    <div class="skill-item">ידע פדגוגי נרחב להגשה לבגרות בכל הרמות (3, 4, 5 יח"ל) ומבחנים בעל פה.</div>
+                    <div class="skill-item">כושר ביטוי גבוה, יכולת הסברה מעולה והקניית ידע חדש.</div>
+                    <div class="skill-item">מוטיבציה מתמדת ללמוד ולהתקדם בכל תחום מקצועי רלוונטי.</div>
+                    <div class="skill-item">תקשורת בין-אישית מעולה, טיפול במשאבי אנוש בנעימות והכלה.</div>
+                    <div class="skill-item">התמחות בתרגום עברית-אנגלית ואנגלית עסקית ברמה גבוהה.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- קטע 6: יצירת קשר -->
+        <section id="section6" class="section">
+            <div class="section-content contact-box">
+                <h2>✨ שני זהבי - כהן ✨</h2>
+                <p class="contact-location">נשואה + 2 | יהודית 5 ב"צ</p>
+                
+                <div class="contact-details">
+                    <a href="tel:0548477719" class="contact-card">
+                        <span class="icon">📞</span>
+                        <span>0548477719</span>
+                    </a>
+                    <a href="mailto:0548477719s@gmail.com" class="contact-card">
+                        <span class="icon">📧</span>
+                        <span>0548477719s@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
 </body>
 </html>
